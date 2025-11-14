@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="theme-color" content="#eecfff" />
+	<title>Horika — Gallery</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<main>
+		<!-- Top section: title and description -->
+		<header id="hero" class="hero">
+			<div class="soft-light" aria-hidden="true"></div>
+			<div class="hero-content">
+				<h1 class="hero-title">Horika Gallery</h1>
+				<p class="hero-desc">A selection of photos captured using the
+					<a href="http://omit.pro/apps/horika">Horika</a>
+					app.
+				</p>
+
+				<div>
+					<a href="https://apps.apple.com/us/app/horika/id6746124840" class="app-store-button" target="_blank"
+						rel="noopener">
+						<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+							alt="Download on the App Store" width="200" height="60">
+					</a>
+				</div>
+
+				<!-- Submit photo button (pure CSS toggle) -->
+				<label for="sheetToggle" class="button-submit-photo" role="button">Submit your photo</label>
+			</div>
+		</header>
+
+		<!-- Featured section: randomly selected large image -->
+		<section id="featured" class="featured">
+			<img id="featuredImg" class="featured-img" alt="Featured photo" />
+		</section>
+
+		<div class="separator" aria-hidden="true"></div>
+
+		<section class="container">
+			<h1 class="sr-only">Gallery</h1>
+
+			<!-- Anchor used as close target for :target lightbox -->
+			<div id="gallery-anchor" aria-hidden="true"></div>
+			<div id="gallery" class="gallery" aria-live="polite"></div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-content">
+			<small>This gallery features photos captured with the Horika iOS app. Learn more on the app page: <a
+					href="https://omit.pro/apps/horika" target="_blank" rel="noopener noreferrer">omit.pro/apps/horika</a>.
+				Created by <a href="https://linjun.me" target="_blank" rel="noopener noreferrer">Jun Lin</a>.</small>
+		</div>
+	</footer>
+
+	<!-- Pure-CSS iOS-like bottom sheet: controlled by hidden checkbox -->
+	<input type="checkbox" id="sheetToggle" class="sheet-toggle" hidden aria-hidden="true">
+	<div class="sheet-overlay" aria-hidden="true">
+		<label for="sheetToggle" class="sheet-backdrop" aria-hidden="true"></label>
+		<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" aria-describedby="sheetDesc">
+			<div class="sheet-handle" aria-hidden="true"></div>
+			<div class="sheet-body">
+				<h2 id="sheetTitle">Share your photo</h2>
+				<p id="sheetDesc">You’re welcome to submit photos to this gallery. Please send your photo(s) by email to <a
+						href="mailto:horika+gallery@omit.pro">horika+gallery@omit.pro</a>. By submitting a photo you grant
+					permission for it to be used freely on this website.</p>
+				<p style="margin-top:.75rem; font-size:.95rem; color:#444;">Thanks — I may resize or convert images for the web.
+				</p>
+				<label for="sheetToggle" class="sheet-close button-submit-photo"
+					style="margin-top:1rem; display:inline-block;">Close</label>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js" defer></script>
+</body>
+
+</html>
