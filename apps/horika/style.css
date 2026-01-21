@@ -124,13 +124,10 @@ header {
 .app-icon {
 	width: 64px;
 	height: 64px;
-	background: linear-gradient(180deg, var(--accent-c), #ffffff);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 12px;
-	box-shadow: 0 8px 20px rgba(24, 36, 50, 0.06);
-	border: 1px solid rgba(11, 21, 32, 0.06);
 }
 
 .app-icon-img {
