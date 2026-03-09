@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omitlens.com/sitemap.xml
